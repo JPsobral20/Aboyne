@@ -1,0 +1,28 @@
+Representação do Estado:
+O estado do jogo Aboyne pode ser representado por:
+
+A posição atual das pedras de cada jogador no tabuleiro.
+Quaisquer pedras bloqueadas, ou seja, pedras que não podem ser movidas na próxima jogada.
+Estado Inicial:
+O estado inicial consiste na posição inicial das pedras de cada jogador no tabuleiro, geralmente distribuídas de forma simétrica, e sem nenhuma pedra bloqueada.
+
+Teste do Objetivo:
+O teste de objetivo verifica se algum jogador moveu uma de suas pedras para a célula de objetivo do seu próprio lado do tabuleiro.
+
+Operadores:
+Os operadores em Aboyne são as ações que um jogador pode executar em seu turno. Cada operador tem pré-condições, efeitos e, potencialmente, custos associados. Aqui estão os operadores para Aboyne:
+
+Mover pedra:
+Pré-condições: A pedra não está bloqueada e pode se mover para uma célula adjacente vazia ou saltar sobre uma linha de pedras amigáveis.
+Efeitos: Move a pedra para a célula desejada ou captura uma pedra inimiga, se aplicável.
+Custo: Pode ser uma constante para todos os movimentos ou variar dependendo da estratégia do jogo.
+Heurísticas/Função de Avaliação:
+Uma heurística comum para Aboyne é a distância das pedras dos jogadores até a célula de objetivo do seu lado do tabuleiro. Quanto mais próxima uma pedra estiver do objetivo, mais favorável é essa configuração do tabuleiro para o jogador correspondente.
+
+Problema de Otimização:
+Para transformar o jogo Aboyne em um problema de otimização, podemos considerar:
+
+Representação da solução: Uma possível representação da solução seria uma sequência de movimentos que levam do estado inicial ao estado final.
+Vizinhança/Mutação e Funções de Crossover: Poderíamos definir operadores que modificam uma solução atual (por exemplo, trocar a ordem de dois movimentos na sequência).
+Restrições rígidas: Podemos impor restrições sobre movimentos ilegais ou tabuleiros inválidos.
+Funções de Avaliação: Uma função de avaliação pode ser baseada na heurística mencionada anteriormente, onde tentamos minimizar a distância das pedras até o objetivo.
